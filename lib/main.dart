@@ -13,14 +13,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  List<String> products = ['Foo tester'];
-
-  addMeele() {
-    setState(() {
-      print(data);
-      products.add('New meele');
-    });
-  }
+  
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +22,7 @@ class _MyAppState extends State<MyApp> {
             appBar: AppBar(
                 title: Center(
                     child: Text(
-              "Easy list",
+              "Learn words",
               style: const TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w600,
@@ -44,7 +37,7 @@ class _MyAppState extends State<MyApp> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
-                      SingleCard(front: "Front side", rear: "Rear side")
+                      SingleCardScreen()
                     ],
                   )
                 ]))));

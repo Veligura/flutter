@@ -1,4 +1,4 @@
-const data = {
+const words = {
   "steep": "крутой",
   "bumpy": "неровный",
   "scatter plot": "график рассеяния",
