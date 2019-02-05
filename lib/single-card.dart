@@ -5,6 +5,7 @@ class SingleCard extends StatefulWidget {
   
   final String front;
   final String rear;
+  bool isRear = false;
 
 
   @override
@@ -17,16 +18,14 @@ class SingleCard extends StatefulWidget {
 
 class _SingleCardState extends State<SingleCard> {
   _SingleCardState();
-  bool isRear = false;
   void toggleCard() {
     setState(() {
-      isRear = !isRear;
+      widget.isRear = !widget.isRear;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return GestureDetector(
         onTap: toggleCard,
         child: Row(children: [
@@ -54,7 +53,7 @@ class _SingleCardState extends State<SingleCard> {
               alignment: Alignment.center,
               margin:
                   const EdgeInsets.symmetric(horizontal: 20.0, vertical: 12),
-              child: Text(isRear ? widget.rear : widget.front,
+              child: Text(widget.isRear ? widget.rear : widget.front,
              style: const TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w600,
